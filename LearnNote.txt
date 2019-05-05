@@ -10,7 +10,7 @@ git remote rm origin
 git remote add github git@github.com:Andy2018712/learngit.git
 注意，远程库的名称叫github
 接着，关联码云的远程库：
-git remote add gitee git@gitee.com:LiuSheng/learngit.git
+git remote add gitee git@gitee.com:LiuSheng2019/learngit.git
 用git remote -v 查看远程库信息
 
 如果要推送到github，使用命令：
