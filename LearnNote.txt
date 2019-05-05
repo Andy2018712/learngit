@@ -3,12 +3,6 @@
 1、使用命令git add <file>，可多次使用，添加多个文件；
 2、使用命令git commit -m <message>， 完成。
 
-遇到无法提交的问题，一般先pull，即，git pull gitee master 这里的gitee是码云仓库，而master是需要上传的分支。
-两个仓库不同，发现git输出refusing to merge unrelated histories 无法pull内容
-因为他们是两个不同的项目，合并两个不同项目，git需要在git pull之后添加一句代码（git 2.9.2版本及之后版本），
---allow-unrelated-histories告诉git允许不相关历史合并。
-如果使用该方法还无法提交，需要看一下是不是发生了冲突，解决冲突再提交。
-
 git 给远程库起的默认名称是origin，如果有多个远程库，需要用不同的名称来标识不同的远程库。
 先删除已关联的名为origin的远程库：
 git remote rm origin
@@ -23,3 +17,11 @@ git remote add gitee git@gitee.com:LiuSheng/learngit.git
 git push github master
 如果推送到码云，使用命令：
 git push gitee master
+
+遇到无法提交的问题，一般先pull，即，git pull gitee master 这里的gitee是码云仓库，而master是需要上传的分支。
+两个仓库不同，发现git输出refusing to merge unrelated histories 无法pull内容
+因为他们是两个不同的项目，合并两个不同项目，git需要在git pull之后添加一句代码（git 2.9.2版本及之后版本），
+--allow-unrelated-histories告诉git允许不相关历史合并。
+如果使用该方法还无法提交，需要看一下是不是发生了冲突，解决冲突再提交。
+
+
