@@ -24,4 +24,6 @@ git push gitee master
 --allow-unrelated-histories告诉git允许不相关历史合并。
 如果使用该方法还无法提交，需要看一下是不是发生了冲突，解决冲突再提交。
 
-
+git pull遇到问题Access denied: Repository Not Found
+fatal: Could not read from remote repository.
+解决办法：检查远程url和本地设置的远程url是否存在冲突，若存在冲突，解决冲突，修改为一致的url即可。
