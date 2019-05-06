@@ -56,3 +56,23 @@ git pull origin 分支名
 
 #同样，也可以推送任意分支
 git push 远程库名 分支名
+
+=============================================================================================================
+ 代码分支提交注意事项：
+master是主开发分支，每个人可以有1到多个开发分支。
+例如我日常开发分支是zjjdev。
+如果手头正在开发的没弄完，临时有个功能要修改，或有个bug要修订，也可以另建一个分支，开发完成后合并到master或日常开发分支上，删掉临时分支。
+
+合并分支的原则：
+1. 当个人开发分支还不完善，还不能让其它人合并，但需要在服务器上存储时，push到服务器自己的分支上。
+  命令：       git push orign zjjdev  或  git push origin zjjdev:zjjdev   
+  smartgit：工具栏push按钮或右键菜单：push 'zjjdev'
+  
+2. 个人开发分支测试ok，先把其它人提交的修改合并到自己的开发分支上，再push到服务器上的master分支。
+1) fetch服务器上的修改
+2) 合并其它人master的修改(merge或rebase)
+   git merge origin/master
+  如果两边的修改差异较大，中间间隔的提交数比较多，用merge；修改较少用rebase，历史记录清爽些。
+3）测试合并后的修改，push到服务器上的master分支
+   命令：git push origin zjjdev:master
+smartgit：push按钮右下角的箭头点开，push to...，或右键菜单：push 'zjjdev' To .... ，然后设置Custom Ref为master（会记忆这个参数，下次不用输入）
