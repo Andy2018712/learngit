@@ -43,4 +43,9 @@ vi .gitmodules  #修改url地址
 git submodule sync
 
 然后提交更改即可
+
+#删除子模块
+git rm --cached {submodule_path}   #submodule_path即子模块在仓库下的路径
+git commit -m 'xxx'
+git push
  
