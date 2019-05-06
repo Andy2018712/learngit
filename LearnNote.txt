@@ -27,3 +27,20 @@ git push gitee master
 git pull遇到问题Access denied: Repository Not Found
 fatal: Could not read from remote repository.
 解决办法：检查远程url和本地设置的远程url是否存在冲突，若存在冲突，解决冲突，修改为一致的url即可。
+
+
+#直接使用git submodule就可以不必要将另一个项目复制一份，直接引用即可。
+#添加 git 子模块
+git submodule add repourl
+
+#初次clone带有子模块的仓库，如果想查看子模块的内容：
+git submodule init
+git submodule update
+或者 git submodule update --init --recursive
+
+#更新子模块地址
+vi .gitmodules  #修改url地址
+git submodule sync
+
+然后提交更改即可
+ 
