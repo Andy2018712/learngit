@@ -49,3 +49,10 @@ git rm --cached {submodule_path}   #submodule_path即子模块在仓库下的路
 git commit -m 'xxx'
 git push
  
+#将分支名作为参数，然后加上checkout语句，就可以拉取任意分支了
+git checkout 分支名 （参数， 外部传递）
+git reset --hard <commit id>
+git pull origin 分支名 
+
+#同样，也可以推送任意分支
+git push 远程库名 分支名
